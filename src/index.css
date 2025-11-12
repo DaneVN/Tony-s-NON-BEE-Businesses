@@ -8,7 +8,23 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #fdf6e3;
+  /* OPTION ONE */
+  --cl-primary: #2b6777;
+  --cl-secondary: #52ab98;
+  --cl-light-accent: #c8d8e4;
+  --cl-dark-accent: #102e3c;
+  --cl-contrast: #e63946;
+  --cl-text-dark: #1b1b1b;
+  --cl-text-light: #f8f9fa;
+  /*  OPTION TWO  */
+  /* --cl-primary: #8d5524;
+  --cl-secondary: #d97c2b;
+  --cl-light-accent: #f4e1c1;
+  --cl-dark-accent: #3e2723;
+  --cl-contrast: #c41e3a;
+  --cl-text-dark: #1f1f1f;
+  --cl-text-light: #fff8f0; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,21 +37,16 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
-a:hover {
+a:active {
   color: #535bf2;
 }
 
 body {
   margin: 0;
-  display: flex;
+  display: block;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -45,27 +56,48 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--cl-primary);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--cl-dark-accent);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #f8f9fa;
+    background-color: #0f1e26;
+
+    /* === DARK MODE HEX VALUES === */
+    --cl-primary: #52c1d9;
+    --cl-secondary: #7de2d1;
+    --cl-light-accent: #2c4a55;
+    --cl-dark-accent: #0b1f2a;
+    --cl-contrast: #ff6b6b;
+    --cl-text-dark: #e2e8f0;
+    --cl-text-light: #ffffff;
   }
+
+  /* Hover states that feel native in dark mode */
   a:hover {
-    color: #747bff;
+    color: #8bbeff;
   }
+
   button {
-    background-color: #f9f9f9;
+    background-color: #1e3a46;
+    border: 1px solid #2c4a55;
+  }
+
+  /* Optional: make any explicit light backgrounds flip */
+  .bg-white {
+    background-color: #0f1e26 !important;
+  }
+  .bg-gray-100 {
+    background-color: #1e3a46 !important;
   }
 }
