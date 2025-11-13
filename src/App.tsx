@@ -1,3 +1,4 @@
+import BusinessCard from "./assets/Elements/BusinessCard";
 import Footer from "./assets/Elements/Footer";
 import Header from "./assets/Elements/Header";
 
@@ -27,6 +28,14 @@ function App() {
         {/* Navigation: About us section */}
         {/* Navigation: Contact us */}
         {/* Navigation: Can I add my business to this list? */}
+        <div
+          id="placeholder_card"
+          className="flex flex-col justify-items-center items-center w-fit h-full"
+        >
+          <BusinessCard />
+          <BusinessCard />
+          <BusinessCard />
+        </div>
       </main>
       <Footer />
     </>
