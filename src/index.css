@@ -1,17 +1,21 @@
 @import "tailwindcss";
 
 /* Add any custom styles below */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #fdf6e3;
   /* OPTION ONE */
   --cl-primary: #2b6777;
   --cl-secondary: #52ab98;
+  --cl-third: #417b8a;
   --cl-light-accent: #c8d8e4;
   --cl-dark-accent: #102e3c;
   --cl-contrast: #e63946;
@@ -22,9 +26,13 @@
   --cl-secondary: #d97c2b;
   --cl-light-accent: #f4e1c1;
   --cl-dark-accent: #3e2723;
-  --cl-contrast: #c41e3a;
+  --cl-contrast: #c41e3a; 
   --cl-text-dark: #1f1f1f;
   --cl-text-light: #fff8f0; */
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #f2f5f8;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -68,7 +76,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark /*Should be dark*/) {
   :root {
     color: #f8f9fa;
     background-color: #0f1e26;
@@ -76,6 +84,7 @@ button:focus-visible {
     /* === DARK MODE HEX VALUES === */
     --cl-primary: #52c1d9;
     --cl-secondary: #7de2d1;
+    --cl-third: #4fd1c5;
     --cl-light-accent: #2c4a55;
     --cl-dark-accent: #0b1f2a;
     --cl-contrast: #ff6b6b;
@@ -100,4 +109,14 @@ button:focus-visible {
   .bg-gray-100 {
     background-color: #1e3a46 !important;
   }
+}
+
+/* Custom Styles for Business Card Component */
+.keyword {
+  background-color: var(--cl-third);
+  padding-inline: 1rem;
+  padding-block: 0.25rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+  height: fit-content;
 }
