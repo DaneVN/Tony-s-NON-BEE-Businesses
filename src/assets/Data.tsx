@@ -8,7 +8,7 @@ export const listOptions = [
     label: "Tell me more about BeyondBEE",
   },
   {
-    to: "/tutourials",
+    to: "/tutorials",
     label: "I want to learn how to use BeyondBEE",
   },
   {
