@@ -1,7 +1,7 @@
 function AboutPage() {
   return (
     <main>
-      <h1 className="text-6xl text-center w-full text-(--cl-light-accent) mt-32">
+      <h1 className="text-6xl text-center text-(--cl-dark-accent) dark:text-(--cl-light-accent) w-full mt-32">
         <strong>About BeyondBEE</strong>
       </h1>
 

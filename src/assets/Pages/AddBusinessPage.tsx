@@ -1,7 +1,7 @@
 function AddBusinessPage() {
   return (
     <main>
-      <h1 className="text-6xl text-center w-full text-(--cl-light-accent) mt-32">
+      <h1 className="text-6xl text-center text-(--cl-dark-accent) dark:text-(--cl-light-accent) w-full mt-32">
         <strong>Adding a business</strong>
       </h1>
       <p className="text-2xl text-(--cl-text-dark) w-3/4 mx-auto mt-16">
@@ -28,7 +28,10 @@ function AddBusinessPage() {
           submission and get back to you within 3-5 business days.
         </li>
         <li className="mt-4">
-          Once approved, you will be required to make a once-off payment of R450
+          Once approved, you will be required to make a{" "}
+          <strong className="italic text-(--cl-contrast)">
+            once-off payment of R450
+          </strong>{" "}
           via banking information provided in the confirmation email.
         </li>
         <li className="mt-4">

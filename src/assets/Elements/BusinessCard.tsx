@@ -7,7 +7,7 @@ function BusinessCard(businessData: {
   logoUrl: string;
 }) {
   return (
-    <div className="w-9/10 h-fit bg-(--cl-light-accent) rounded-lg shadow-lg p-4 m-4 flex flex-col justify-between">
+    <div className="w-9/10 h-fit md:h-full bg-(--cl-light-accent) rounded-lg shadow-lg p-4 m-4 flex flex-col justify-between">
       <div>
         <h2
           id="business-name"
@@ -16,7 +16,7 @@ function BusinessCard(businessData: {
           {businessData.name}
         </h2>
       </div>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-5 md:h-full">
         <div id="business-information" className="flex flex-col gap-5">
           <div
             id="links"
@@ -38,14 +38,18 @@ function BusinessCard(businessData: {
             <a
               href={businessData.website}
               className="w-1/5 text-(--cl-text-dark)"
+              target="_blank"
             >
-              <img src="./Code.png" alt="Website link" className="w-full" />
+              <img src="./web-icon.png" alt="Website link" className="w-full" />
             </a>
           </div>
           <div id="business-keyords" className="flex gap-1 flex-wrap">
             {businessData.keywords
               ? businessData.keywords.map((keyword, index) => (
-                  <p key={index} className="keyword text-(--cl-text-dark)">
+                  <p
+                    key={index}
+                    className="keyword  dark:text-(--cl-dark-accent) text-(--cl-light-accent) italic"
+                  >
                     {keyword}
                   </p>
                 ))
@@ -56,7 +60,7 @@ function BusinessCard(businessData: {
           <img
             src={businessData.logoUrl ? businessData.logoUrl : "/bee-icon.png"}
             alt="business logo"
-            className="h-full w-full object-contain"
+            className="h-full w-full object-contain text-(--cl-dark-accent)"
           />
         </div>
       </div>

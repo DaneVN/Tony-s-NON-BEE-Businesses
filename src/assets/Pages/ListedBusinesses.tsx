@@ -53,7 +53,7 @@ function ListedBusinesses() {
 
   return (
     <>
-      <h1 className="text-6xl text-center w-full text-(--cl-light-accent) mt-32">
+      <h1 className="text-6xl text-center text-(--cl-dark-accent) dark:text-(--cl-light-accent) w-full mt-32">
         <strong>Listed Businesses</strong>
       </h1>
       <div className="w-fit flex justify-between items-center m-4 gap-4 md:flex-row flex-col">

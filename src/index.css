@@ -42,9 +42,10 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #373da8;
   text-decoration: inherit;
 }
+
 a:active {
   color: #535bf2;
 }
