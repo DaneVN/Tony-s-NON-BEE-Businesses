@@ -3,7 +3,7 @@ function welcomeImage() {
     <div className="-mt-15 h-screen w-screen bg-(--cl-Primary) relative overflow-hidden">
       {/* Background image – transparent */}
       <img
-        src="./background1.jpg"
+        src="./background4.jpg"
         className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
         alt="Background"
       />
